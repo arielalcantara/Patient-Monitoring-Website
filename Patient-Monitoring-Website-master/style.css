@@ -1,0 +1,105 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: Roboto, Helvetica, sans-serif;
+	font-size: 12pt;
+	background-color: #F9F7F7; /* #F9F8EB --> */
+	margin: 0;
+	padding: 0;
+}
+h1, h2 {
+	margin: auto;
+}
+hr {
+	clear: both;
+	width: 95%;
+}
+#page-container {
+	position: relative;
+ 	min-height: 100vh;
+}
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Same as footer height */
+}
+#page-logo {
+	margin: 20px 0 0 40px;
+}
+#logo {
+	box-sizing: content-box;
+	padding-right: 20px;
+	float: left;
+	width: 85px;
+	height: 90px;
+}
+#main-header {
+	font-family: Roboto+Slab, sans-serif;
+	padding: 16px 0 50px 0;
+}
+#sub-header {
+	font-family: Roboto+Slab, sans-serif;
+	text-align: center;
+	margin: 20px 0;
+}
+#content {
+	margin: auto;
+}
+#description {
+	text-align: justify;
+	float: left;
+	width: 42.5%;
+	margin: 0 2.5% 0 5%;
+}
+#terms-and-conditions {
+	background-color: #DBE2EF;
+	padding: 5px 20px;
+	border-style: none;
+}
+#login-section {
+	float: right;
+	width: 42.5%;
+	margin: 20px 5% 0 2.5%;
+}
+#login-text {
+	float: left;
+	background-color: #F9F8EB; 
+	width: 100%;
+	border-style: dashed;
+	border-color: #3F72AF;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 12pt;
+	padding: 13px 10px;
+}
+.fas fa-info
+#login-form {
+	width: 100%;
+	float: left;
+}
+.login-input {
+	width: 100%;
+	height: 40px;
+	text-indent: 25px;
+	margin-top: 20px; 
+}
+#login-submit {
+	width: 100px;
+	height: 30px;
+	float: left; 
+	margin-top: 20px;
+	color: white;
+	background-color: #112D4E;
+	border-style: none;
+}
+#footer {
+	width: 100%;
+	height: 2.5rem;
+	position: absolute;
+	bottom: 0;
+	padding-top: 0.7em;
+	font-family: monospace;
+	color: white;
+	background-color: #112D4E;
+	clear: both;
+
+}
