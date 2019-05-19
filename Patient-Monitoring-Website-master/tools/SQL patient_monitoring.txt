@@ -1,0 +1,11 @@
+CREATE DATABASE patient_monitoring;
+
+CREATE TABLE users (
+	user_id int(7) AUTO_INCREMENT NOT null PRIMARY KEY,
+    user_first varchar(256) not null,
+    user_last varchar(256) not null,
+    user_email varchar(256) not null,
+    user_uname varchar(256) not null,
+    user_pwd varchar(256) not null
+);
+
