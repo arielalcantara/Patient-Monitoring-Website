@@ -1,5 +1,5 @@
 # Patient Monitoring Website
-## Overview:
+## Overview
 This project is a prototype of a portal website where hospital clients can view their checkup records. 
 <br>Among its features include:<br>
 * A responsive design layout that adapts to different screen sizes ranging from mobile to desktop screens. This was done using CSS breakpoints and media queries as well as relative units (i.e. rems, percentages).
@@ -8,7 +8,7 @@ This project is a prototype of a portal website where hospital clients can view 
   * Different user access levels (e.g. Basic user accounts cannot access HTML elements only available for admin accounts)
   * Security against injection attacks using __Prepared Statements__
   * User sessions using PHP that prevent access to any part of the website when not logged in.
-## How the Website Works:
+## How the Website Works
 There are 2 access levels on the website depending on account type: __Admin__ and __User__.
 ### Users can:
   - View their checkup records.
@@ -31,6 +31,6 @@ There are 2 access levels on the website depending on account type: __Admin__ an
   8. Drag and drop or import the db tables from 'tools/patient_monitoring.sql'.
   9. If you have set another password or username in phpMyAdmin, add it inside 'includes/dbconnect.inc.php'. 
   10. DONE.
-## Work in Progress:
+## Work in Progress
 - Implement checkup records and client profile editing for Admins.
 - Improve security by adding client-side form validation.
