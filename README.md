@@ -2,7 +2,7 @@
 ## Overview
 This project is a prototype of a portal website where hospital clients can view their checkup records. 
 <br>Among its features include:<br>
-* A responsive design layout that adapts to different screen sizes ranging from mobile to desktop screens. This was done using CSS breakpoints and media queries as well as relative units (i.e. rems, percentages).
+* A responsive design layout that adapts to different screen sizes ranging from mobile to desktop screens. This was done using CSS breakpoints via media queries as well as relative units (i.e. rems, percentages).
 * Error handling features such as the ones implemented in the login and add new account systems where users are notified when they make input mistakes (e.g. an error message is shown when a wrong password is entered).
 * Security features including: 
   * Different user access levels (e.g. Basic user accounts cannot access HTML elements only available for admin accounts)
