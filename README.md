@@ -8,16 +8,21 @@ This project is a prototype of a portal website where hospital clients can view 
   * Different user access levels (e.g. Basic user accounts cannot access HTML elements only available for admin accounts)
   * Security against injection attacks using __Prepared Statements__
   * User sessions using PHP that prevent access to any part of the website when not logged in.
+  
 ## How the Website Works:
-There are 2 access levels on the website depending on account type: __Admin__ and __User__<br>
-Users can:<br>
-  * View their checkup records.
-  * View their account details.
-  * Change their password (WIP)
-Admins can:
-  * Add new user accounts.
-  * Edit user profiles. (WIP.
-  * Edit user checkup records. (WIP)
+There are 2 access levels on the website depending on account type: __Admin__ and __User__.
+### Users can:
+
+  - View their checkup records.
+  - View their account details.
+  - Change their password. (WIP)<br>
+  
+### Admins can:
+
+  - Add new user accounts.
+  - Edit user profiles. (WIP)
+  - Edit user checkup records. (WIP)
+  
   ## How to Use the Website
   The website was developed using phpMyAdmin and XAMPP client for running the Apache and MySQL modules. Instructions will be based on using the XAMPP client.<br>
   Here are the steps on how to setup the website on your device:
