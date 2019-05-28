@@ -14,7 +14,7 @@
     <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" href="styles/resetstyle.css">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Dashboard | Summit View General Hospital - Patient Monitoring System</title>
+    <title>Account | Summit View General Hospital - Patient Monitoring System</title>
 </head>
 <body>
 	<?php
@@ -30,29 +30,26 @@
 				<h1>Online Health History Report</h1>
 			</header>
 			<header id="page-title">
-				<h1>My Dashboard</h1>
+				<h1>My Account</h1>
 			</header>
 			<section id="page-content">
-				<h2>
-					Welcome, 
+				<table>
 					<?php
-						echo $_SESSION['ufirst'] . ".";
-					?>
-				</h2>
-				<p>
-					<?php
-						// Check if it is the user's first time logging in
-						if ($_SESSION['ulastlogin'] == 'N/A') {
-							echo "This is your first time signing in to SVGH Online Health History Report. We aim to be your companion in your journey to holistic fitness and outstanding health. Thank you for your continuous patronage. <b>- SVGH Team</b>";
-						} else {
-							echo "You were last signed in on " . $_SESSION['ulastlogin'] . ".";
+						$sql = "SELECT * FROM users WHERE user_id = " . $_SESSION['uid'] . ";";
+						$result = mysqli_query($conn, $sql);
+						$resultCheck = mysqli_num_rows($result);
+						// Generate table content
+						if ($resultCheck > 0) {
+							while ($row = mysqli_fetch_assoc($result)) {
+								echo "<tr><td>First Name: </td><td>" . $row['user_first'] . "</td></tr>";
+								echo "<tr><td>Last Name: </td><td>" . $row['user_last'] . "</td></tr>";
+								echo "<tr><td>E-mail Address: </td><td>" . $row['user_email'] . "</td></tr>";
+								echo "<tr><td>Username: </td><td>" . $row['user_uname'] . "</td></tr>";
+								echo "<tr><td>Password: </td><td>********************</td></tr>";
+							}
 						}
 					?>
-				</p>
-				<h2>My Recent Checkup Session</h2>
-				<p>
-					<a href="">*insert date*</a>
-				</p>
+				</table>
 			</section>	
 		</section>
 	</main>

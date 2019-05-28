@@ -1,5 +1,7 @@
 <?php
 	require_once 'includes/logincheck.inc.php';
+	$requiredUserType = 'user';
+	require_once 'includes/usertypecheck.inc.php';
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -14,7 +16,7 @@
     <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" href="styles/resetstyle.css">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Dashboard | Summit View General Hospital - Patient Monitoring System</title>
+    <title>Clients | Summit View General Hospital - Patient Monitoring System</title>
 </head>
 <body>
 	<?php
@@ -30,29 +32,18 @@
 				<h1>Online Health History Report</h1>
 			</header>
 			<header id="page-title">
-				<h1>My Dashboard</h1>
+				<h1>Checkup Records</h1>
 			</header>
 			<section id="page-content">
-				<h2>
-					Welcome, 
-					<?php
-						echo $_SESSION['ufirst'] . ".";
-					?>
-				</h2>
-				<p>
-					<?php
-						// Check if it is the user's first time logging in
-						if ($_SESSION['ulastlogin'] == 'N/A') {
-							echo "This is your first time signing in to SVGH Online Health History Report. We aim to be your companion in your journey to holistic fitness and outstanding health. Thank you for your continuous patronage. <b>- SVGH Team</b>";
-						} else {
-							echo "You were last signed in on " . $_SESSION['ulastlogin'] . ".";
-						}
-					?>
-				</p>
-				<h2>My Recent Checkup Session</h2>
-				<p>
-					<a href="">*insert date*</a>
-				</p>
+				<input id="search-bar" type="text" placeholder="Search Here..." 
+				onkeyup="search()"> 
+				<div id="records">
+					<ul id="ul">
+						<?php
+							require 'includes/mycheckuphistory.inc.php';
+						?>
+					</ul>
+				</div>
 			</section>	
 		</section>
 	</main>

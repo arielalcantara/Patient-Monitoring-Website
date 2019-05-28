@@ -1,0 +1,676 @@
+* {
+	box-sizing: border-box; 
+}
+html {
+	font-size: 16px;
+}
+body {
+	margin: 0;
+	padding: 0 0 2rem 0;
+	font-family: "Roboto", "Helvetica", sans-serif;
+}
+/* For Mobile Screens */
+#page-header {
+	display: none;
+}
+#sub-header {
+	text-align: center;	
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #112d4e;
+	padding: 1.25rem 0.625rem;
+}
+#sub-header h1, #sub-header h2 {
+	margin: 0;
+	font-size: 1.3rem;
+}
+#content-wrap {
+	padding: 0.625rem;
+}
+#description p {
+	margin: 1rem 0;
+	font-size: 1rem;
+}
+#terms-and-conditions {
+	background-color: #dbe2ef; 
+	border-style: none;
+	padding: 0.625rem;
+	margin-bottom: 1.25rem;
+}
+#terms-and-conditions h3 {
+	color: #3f72af;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 0 0.5rem;
+	font-size: 1.1rem;
+}
+#terms-and-conditions p {
+	margin: 0;
+	font-size: 1rem;
+}
+#login-section {
+	display: flex;
+	flex-direction: column;
+}
+#login-instructions {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.625rem;
+	background-color: #f9f8eb;
+	border: dashed #3f72af;
+	margin-bottom: 1.25rem;
+}
+#icon-container {
+	display: flex;
+	width: 5%;
+}
+#login-icon {
+	font-size: 0.9rem;
+	margin: auto;
+	text-align: right;
+}
+#login-text {
+	font-size: 0.9rem;
+	text-align: center;
+	width: 95%;
+}
+#login-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 1.25rem;
+}
+#login-form input {
+	height: 1.8rem;
+	font-size: 0.7rem;
+}
+.login-input {
+	text-align: center;
+}
+.login-input:focus {
+	outline: none;
+	border: 0.05rem solid #3f72af;
+}
+#login-form div {
+	display: flex;
+	flex-direction: column;
+}
+#login-form div button {
+	height: 1.8rem;
+	font-size: 0.7rem;
+	margin: auto;
+	width: 50%;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #112d4e;
+	border-style: none;
+	transition: background-color 500ms;
+}
+#login-form div button:active {
+	background-color: #3f72af;
+}
+#loginerror {
+	color: #ff0000;
+	font-size: 0.9rem;
+	text-align: center;
+	margin: 0;
+}
+#mobile-header {
+	display: flex;
+	position: fixed;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #112d4e;
+	height: 3rem;
+	width: 100%;
+	top: 0;
+	padding: 0 1rem;
+}
+#mobile-header h1 i {
+	letter-spacing: 0.5rem;
+}
+#smallscreen-title {
+	color: #fff;
+	font-size: 1.6rem;
+	margin: 0;
+}
+#bigscreen-title {
+	display: none;
+}
+#mobile-header nav {
+	display: none;
+	font-size: 1.2rem;
+	width: 100%;
+	position: absolute;
+	top: 3rem;
+	left: 0;
+	background-color: #112d4e;
+}
+#mobile-header nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	background-color: #112d4e;
+}
+#mobile-header nav ul li {
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top: 1px solid #f9f9f9;
+	text-align: center;
+}
+#mobile-header ul li:active {
+	color: #3f72af;
+}
+#mobile-header nav ul li a {
+	color: #fff;
+	height: 100%;
+	width: 100%;
+	line-height: 3rem;
+	text-decoration: none;
+	color: #fff;
+}
+#mobile-logout {
+	color: #fff;
+	position: relative;
+}
+#mobile-logout form {
+	flex: 1;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+#mobile-logout form input[type=submit] {
+	width: 100%;
+	height: 100%; 
+	color: transparent;
+	background: transparent;	
+	border: 0;
+	padding: 0;
+	outline: none;
+	cursor: pointer;
+}
+#menu-toggle {
+	color: #fff;
+	font-size: 2rem;
+	display: block;
+}
+main nav {
+	display: none;
+}
+#section-wrap {
+	margin-top: 3rem;
+	padding-top: 1rem;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background-color: #f9f8eb;
+}
+#heading, #page-title {
+	width: 90%;
+	text-align: center;
+	padding: 0.5rem;
+	border-bottom: 1px solid #000000;
+	text-transform: uppercase;
+	color: #112d4e;
+}
+#heading {
+	font-size: 1.5rem;
+}
+#page-title {
+	font-size: 1.3rem;
+}
+#page-content {
+	width: 90%;
+	padding: 1rem 0;
+	line-height: 1.8rem; 
+}
+#page-content h2 {
+	color:  #112d4e;
+	text-transform: uppercase;
+}
+#page-content p {
+	margin-bottom: 1rem;
+}
+#page-content table {
+	width: 100%;
+}
+#page-content table tr:nth-of-type(odd) {
+	background-color: #f9f9f9 
+}
+#page-content table tr td {
+	padding: 0.1rem;
+	color: #333333;
+	border-bottom: 0.00625rem solid #CFCFCF;
+	border-top: 0.00625rem solid #CFCFCF;
+	text-indent: 1rem;
+}
+#search-bar {
+	float: left;
+	height: 1.8rem;
+	width: 15rem;
+	text-indent: 1rem;
+}
+#search-bar:hover {
+	border: 0.1rem solid #112d4e;
+}
+#add-btn-container {
+	margin: 0;
+}
+#add-btn {
+	float: right;
+	width: 9rem;
+	height: 2rem;
+	font-size: 0.7rem;
+	text-transform: uppercase;
+	border: none;
+	color: #fff;
+	background-color: #112d4e;
+	transition: background-color 500ms;
+}
+#add-btn:hover {
+	background-color: #3f72af;
+	cursor: pointer;
+}
+#addaccounterror {
+	clear: both;
+	text-align: right;
+	color: #ff0000;
+	font-size: 0.8rem;
+	line-height: 2rem;
+}
+#addaccounterror span {
+	color: #46b421;
+}
+#modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+#add-account, #add-record {
+	z-index: 2;
+	margin: 10% 5%;
+	background-color: #fff;
+}
+#add-account header, #add-record header {
+	position: relative;
+	display: flex;
+	height: 5rem;
+	font-size: 1.5rem;
+}
+#add-account header h1, #add-record header h1 {
+	margin: auto;
+	text-transform: uppercase;
+	color: #112d4e;
+}
+#add-account form, #add-record form {
+	display: flex;
+	margin: 0 auto;
+	width: 80%;
+	justify-content: space-between;
+	flex-direction: column;
+	line-height: 1.5rem;
+}
+#add-account form input, #add-record form input {
+	height: 1.5rem;
+	margin-bottom: 1rem;
+	padding: 0;
+	font-size: 0.8rem;
+	line-height: 1.5rem;
+	text-indent: 1rem;
+}
+#add-record form select {
+	height: 1.5rem;
+	margin-bottom: 1rem;
+	padding: 0;
+	font-size: 0.8rem;
+	line-height: 1.5rem;
+	text-indent: 1rem;
+}
+#add-record form textarea {
+	width: 100%;
+	height: 8rem;
+}
+#add-account form button, #add-record form button {
+	margin: 2rem auto;
+	width: 40%;
+	height: 2rem;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	border: none;
+	color: #fff;
+	background-color: #112d4e;
+	transition: background-color 500ms;
+}
+#add-account form button:hover, #add-record form button:hover {
+	background-color: #3f72af;
+	cursor: pointer;
+}
+#close-btn {
+	display: block;
+	position: absolute;
+	right: 0;
+	line-height: 0.8rem;
+	padding: 0.2rem;
+	margin: 1rem;
+	font-size: 1.6rem;
+	color: #000;
+	border: 0.1rem solid #000;
+	border-radius: 100%;
+	transition: all 500ms;
+}
+#close-btn:hover {
+	color: #fff;
+	background-color: #3f72af;
+	border: 0.1rem solid #3f72af;
+	border-radius: 100%;
+	cursor: pointer;
+}
+#profiles ul, #records ul {
+	margin-top: 3rem;
+	list-style: none;
+	text-indent: 2rem;
+}
+#profiles ul li, #records ul li {
+	line-height: 2rem;
+	height: 2rem;
+	color: #333333;
+	border-bottom: 0.00625rem solid #CFCFCF;
+}
+#profiles ul li:first-child , #records ul li:first-child {
+	border-top: 0.00625rem solid #CFCFCF;
+}
+#profiles ul li:hover, #records ul li:hover {
+	color: #3f72af;
+	cursor: pointer;
+}
+#profiles ul li a, #records ul li a {
+	color: inherit;
+}
+#profiles ul li:nth-of-type(odd), #records ul li:nth-of-type(odd) {
+	background-color: #f9f9f9 
+}
+#client-profile table {
+	margin-top: 3rem;
+}
+#client-profile table tr td {
+	text-indent: 0;
+}
+#client-profile table tr td:nth-of-type(1) {
+	width: 10rem;
+	text-indent: 1rem;
+}
+#checkup-record table {
+	margin-top: 3rem;
+}
+#checkup-record table tr td {
+	text-indent: 0;
+}
+#checkup-record table tr td:nth-of-type(1) {
+	width: 10rem;
+	text-indent: 1rem;
+}
+#footer {
+	position: fixed;
+	bottom: 0;
+	color: #fff;
+	background-color: #112d4e;
+	width: 100%;
+	height: 1.5rem;
+	text-indent: 0.625rem;
+	padding: 0.4rem;
+	font-size: 0.7rem;
+	font-family: monospace;
+	text-align: center;
+}
+/* For Tablet Screens */
+@media only screen and (min-width: 600px) {
+	:root {
+		font-size: 17px;
+	}
+	#page-header {
+		display: flex;
+		align-items: center;
+		justify-content: left;
+		padding: 0.5rem;
+		font-family: serif;
+	}
+	#logo {
+		margin-right: 1rem;
+	}
+	#logo img {
+		width: 5rem;
+	}
+	#main-header h1 {
+		font-size: 1.4rem; 
+		text-transform: uppercase;
+		margin: 0 0 0.5rem;
+	}
+	#main-header h2 {
+		font-size: 0.8rem;
+		margin: 0; 
+	}
+	#mobile-header {
+		position: absolute;
+		top: 6.6rem;
+	}
+	#smallscreen-title {
+		display: none;
+	}
+	#bigscreen-title {
+		display: block;
+		color: #fff;
+		font-size: 1.3rem;
+		margin: 0;
+	}
+	#section-wrap {
+		background-color: #fff;
+	}
+	#heading {
+		padding: 0 0 1rem;
+	}
+	#page-title {
+		padding: 1rem 0;
+	}
+	#add-account, #add-record {
+		margin: 10% 10%;
+	}
+	#footer {
+		text-align: left;
+		text-indent: 1.5rem;
+	}
+}
+/* For Laptop Screens */
+@media only screen and (min-width: 770px) {
+	body {
+		font-size: 17px;
+	}
+	#page-header {
+		width: 90%;
+		margin: auto;
+		padding: 0.5rem 0;
+	}
+	#sub-header {
+		width: 90%;
+		margin: 0 auto 1.2rem;
+		color: #112d4e;
+		background-color: #fff;
+		border-top: solid;
+		border-bottom: solid;
+		border-width: 1px;
+	}
+	#sub-header h1 {
+		font-size: 3.7rem;
+		margin: 0;
+	}
+	#sub-header h2 {
+		font-size: 2.3rem;
+		margin: 0;
+	}
+	#content-wrap {
+		display: flex;
+		width: 85%;
+		padding: 0;
+		margin: auto;
+		justify-content: space-between;
+	}
+	#description {
+		width: 48%;
+		margin: 0;
+	}
+	#description p {
+		margin-top: 0;
+	}
+	#terms-and-conditions {
+		padding: 0.9rem;
+	}
+	#terms-and-conditions h3 {
+		text-align: left;
+	}
+	#login-section {
+		width: 48%;
+	}
+	#login-instructions {
+		padding: 0.9rem 0.6rem;
+	}
+	.login-input {
+		text-align: left;
+		text-indent: 1.4rem; 
+	}
+	#login-form div {
+		justify-content: space-between;
+		flex-direction: row;
+	}
+	#login-form div button {
+		margin: 0;
+		width: 30%;
+		height: 1.6rem;
+		transition: background-color 500ms;
+	}
+	#login-form div button:hover {
+		background-color: #3f72af;
+		cursor: pointer;
+	}
+	#loginerror {
+		width: 65%;
+		text-align: left;
+		line-height: 1.5rem;
+	}
+	#mobile-header {
+		display: none;
+	}
+	main {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 90%;
+		margin: 1rem auto 0;
+		padding: 0;
+	}
+	main nav {
+		display: flex;
+		flex-basis: 11.5rem;
+	}
+	main nav ul {
+		list-style: none;
+		padding: 0;
+		flex: 1;
+	}
+	main nav ul li {
+		margin: auto;
+		height: 2.4rem;
+		line-height: 2.4rem;
+		font-size: 0.8rem;
+		text-indent: 0.5rem;
+		text-transform: uppercase;
+		background-color: #f9f8eb;
+		border: none;
+	}
+	main nav ul li:hover {
+		background-color: #dbe2ef;
+		border-left: solid;
+		border-color: #112d4e;
+		border-width: 3px;
+		cursor: pointer;
+	}
+	main nav ul li a, #main-logout {
+		text-decoration: none;
+		display: block;
+		height: 100%;
+		padding: 0;
+		color: #112d4e;
+		transition: background-color 500ms;
+	}
+	main nav ul li span {
+		padding-left: 0.5rem;
+	}
+	#main-logout {
+		position: relative;
+	}
+	#main-logout input[type=submit] {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		color: transparent;
+		background: transparent;
+		border: 0;
+		padding: 0;
+		outline: none;
+		cursor: pointer;
+	}
+	#section-wrap {
+		margin: 0 0 0 1.5rem;
+		padding: 0;
+		flex: 1;
+	}
+	#heading, #page-title {
+		width: 100%;
+	}
+	#page-content {
+		width: 100%;
+	}
+	#add-account, #add-record {
+		margin: 10% 20%;
+	}
+}
+/* For desktop screens */
+@media only screen and (min-width: 1024px) {
+	:root {
+		font-size: 20px;
+	}
+	main {
+		width: 85%;
+	}
+}
+/* For large desktop screens */
+@media only screen and (min-width: 1440px) {
+	:root {
+		font-size: 22px;
+	}
+	header {
+
+	}
+	#login-form div button {
+		width: 25%;
+	}
+	#loginerror {
+		width: 70%;
+	}
+}
+/* For 4K screen resolution */
+@media only screen and (min-width: 2560px) {
+	:root {
+		font-size: 32px;
+	}

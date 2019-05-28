@@ -1,5 +1,7 @@
 <?php
 	require_once 'includes/logincheck.inc.php';
+	$requiredUserType = 'admin';
+	require_once 'includes/usertypecheck.inc.php';
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -14,7 +16,7 @@
     <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" href="styles/resetstyle.css">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Dashboard | Summit View General Hospital - Patient Monitoring System</title>
+    <title>Clients | Summit View General Hospital - Patient Monitoring System</title>
 </head>
 <body>
 	<?php
@@ -30,29 +32,43 @@
 				<h1>Online Health History Report</h1>
 			</header>
 			<header id="page-title">
-				<h1>My Dashboard</h1>
+				<h1>My Clients</h1>
 			</header>
 			<section id="page-content">
-				<h2>
-					Welcome, 
-					<?php
-						echo $_SESSION['ufirst'] . ".";
-					?>
-				</h2>
-				<p>
-					<?php
-						// Check if it is the user's first time logging in
-						if ($_SESSION['ulastlogin'] == 'N/A') {
-							echo "This is your first time signing in to SVGH Online Health History Report. We aim to be your companion in your journey to holistic fitness and outstanding health. Thank you for your continuous patronage. <b>- SVGH Team</b>";
-						} else {
-							echo "You were last signed in on " . $_SESSION['ulastlogin'] . ".";
-						}
-					?>
-				</p>
-				<h2>My Recent Checkup Session</h2>
-				<p>
-					<a href="">*insert date*</a>
-				</p>
+				<input id="search-bar" type="text" placeholder="Search Here..." 
+				onkeyup="search()">
+				<div id = "btn-container">
+					<button id="add-btn">&plus; Add New Account</button>
+				</div>
+				<?php
+					include 'includes/addaccounterror.inc.php';
+				?>
+				<div id="modal">
+					<section id="add-account">
+						<header>
+							<div id="close-btn">
+								&times;
+							</div>
+							<h1>Add New Account</h1>
+						</header>
+						<form action="includes/addaccount.inc.php" method="post">
+							Username: <input type="text" name="uid">
+							First Name: <input type="text" name="fname">
+							Last Name: <input type="text" name="lname">
+							E-mail Address: <input type="text" name="email">
+							Password: <input type="password" name="pwd">
+							Repeat Password: <input type="password" name="pwdRepeat">
+							<button type="submit" name="addaccount-submit">Create Account</button>
+						</form>
+					</section>
+				</div>
+				<section id="profiles">
+					<ul id="ul">
+						<?php
+							require_once 'includes/clients.inc.php';
+						?>
+					</ul>
+				</section>
 			</section>	
 		</section>
 	</main>

@@ -1,5 +1,13 @@
 <?php
+	require_once 'includes/dbconnect.inc.php';
 	session_start();
+	// Update last logged in time if a user is still logged in 
+	if (isset($_SESSION['uname'])) {
+		require_once 'includes/datetime.inc.php';
+	}
+	// Clear session array each time this page is accessed
+	session_unset(); 
+	session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -10,20 +18,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">
-    <link rel="icon" href="images/icon.png" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="styles/resetstyle.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Summit View General Hospital - Patient Monitoring System</title>
 </head>
 <body>
-	<header id="page-header">
-		<div id="logo">
-			<img src="images/logo.png" alt="Summit View General Hospital Logo">
-		</div>
-		<div id="main-header">
-			<h1><b>Summit View General Hospital</b></h1>
-			<h2><i>Providing world-class healthcare services since 1984.</i></h2>
-		</div>
-	</header>
+	<?php
+		require 'elements/page-header.inc.php';
+	?>
 	<header id="sub-header">
 		<h1>SVGH Patient Monitoring System:</h1>
 		<h2>Patient's Health History Report</h2>
@@ -65,8 +68,8 @@
 			</div>
 		</section>	
 	</div>
-	<footer id="footer">
-		&copy; This website is developed by Ariel Alcantara
-	</footer>
+	<?php
+		require 'elements/page-footer.inc.php';
+	?>
 </body>
 </html>
