@@ -24,7 +24,7 @@ There are 2 access levels on the website depending on account type: __Admin__ an
   1. Install XAMPP.
   2. Run the XAMPP control panel. 
   3. Inside the control panel, start up the Apache and MySQL modules.
-  4. Place the _"Patient-Monitoring-Website-master"_ folder inside xampp/htdocs.
+  4. Place the _"Patient-Monitoring-Website-master"_ folder inside _"xampp/htdocs"_.
   5. Open your trusty internet browser.
   6. In the address bar, type in _'localhost/phpmyadmin'_.
   7. Create a new database called _"patient_monitoring"_.
