@@ -8,6 +8,7 @@ Among its features include:
   * Different __user access levels__ (e.g. Basic user accounts cannot access website elements only available for admin accounts)
   * Security against injection attacks using __Prepared Statements__
   * Prevents access to any part of the website when not logged in through the use of PHP session variables.
+* __Search and filter function__ that simplifies the task of looking for a particular profile/record. 
 ## How the Website Works
 There are 2 access levels on the website depending on account type: __Admin__ and __User__. In the finished version...
 ### Users can:
