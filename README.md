@@ -13,12 +13,13 @@ Among its features include:
 There are 2 access levels on the website depending on account type: __Admin__ and __User__. In the finished version...
 ### Users can:
   - [x] View their checkup records.
-  - [ ] View their account details.
+  - [x] View their account details.
   - [ ] Change their login password.
 ### Admins can:
   - [x] Add new user accounts.
   - [ ] Edit user profiles.
   - [ ] Add/edit user checkup records.
+  - [x] View their account details.
   - [ ] Change their login password.
   ## How to Use the Website
   The website was developed using phpMyAdmin and XAMPP client for running the Apache and MySQL modules. The instructions below are based on using the XAMPP client to run the website.
