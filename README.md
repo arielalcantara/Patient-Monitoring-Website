@@ -31,6 +31,6 @@ There are 2 access levels on the website depending on account type: __Admin__ an
   8. Drag and drop or import the db tables from 'tools/patient_monitoring.sql'.
   9. If you have set another password or username in phpMyAdmin, add it inside 'includes/dbconnect.inc.php'. 
   10. DONE.
-## Work in Progress
+## Work-in-Progress (WIP)
 - Implement checkup records and client profile editing for Admins.
 - Improve security by adding client-side form validation.
