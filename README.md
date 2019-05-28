@@ -5,8 +5,8 @@ Among its features include:
 * A __responsive design layout__ that adapts to different screen sizes ranging from mobile to desktop screens. This was done using CSS breakpoints via media queries as well as relative units (i.e. rems, percentages).
 * __Error handling features__ such as the ones implemented in the login and add new account systems where users are notified when they make input mistakes (e.g. an error message is shown when a wrong password is entered).
 * __Security features__ including: 
-  * Different __user access levels__ (e.g. Basic user accounts cannot access website elements only available for admin accounts)
-  * Security against injection attacks using __Prepared Statements__
+  * Different __user access levels__ (e.g. Basic user accounts cannot access website elements only available for admin accounts).
+  * Security against injection attacks using __Prepared Statements__.
   * Prevents access to any part of the website when not logged in through the use of PHP session variables.
 * __Search and filter function__ that simplifies the task of looking for a particular profile/record. 
 ## How the Website Works
