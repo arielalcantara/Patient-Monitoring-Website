@@ -1,6 +1,6 @@
 # Patient Monitoring Website
 ## Overview
-This project is a prototype of a portal website wherein hospital clients can view their checkup records and hospital staff can manage patient records. 
+This is a prototype of a portal website wherein hospital clients can view their checkup records and hospital staff can manage patient records. 
 Among its features include:
 * A __responsive design layout__ that adapts to different screen sizes ranging from mobile to desktop screens. This was done using CSS breakpoints via media queries as well as relative units (i.e. rems, percentages).
 * __Error handling features__ such as the ones implemented in the login and add new account systems where users are notified when they make input mistakes (e.g. an error message is shown when a wrong password is entered).
