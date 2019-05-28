@@ -34,21 +34,3 @@ function search() {
 		}
 	}
 }
-
-/* Old Functions
-// Toggle Checkup Record
-$(document).ready(function () {
-	$("#records ul li").click(function (clicked_id) {
-
-		record = window.open("checkuprecords.php", "", "location=1,scrollbars=0,width=100%,height=100%,resizable=no");
-		id = $("#records ul li").val();
-		alert(clicked_id);
-	});
-});
-
-let listItem = document.getElementById('#records ul li');
-document.addEventListener('click', listItem);
-function openRecord() {
-	let record = window.open("", "", "location=1,scrollbars=0,width=100%,height=100%,resizable=no");
-	record.moveTo(0, 0);
-}*/
