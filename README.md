@@ -8,21 +8,16 @@ This project is a prototype of a portal website where hospital clients can view 
   * Different user access levels (e.g. Basic user accounts cannot access HTML elements only available for admin accounts)
   * Security against injection attacks using __Prepared Statements__
   * User sessions using PHP that prevent access to any part of the website when not logged in.
-  
 ## How the Website Works:
 There are 2 access levels on the website depending on account type: __Admin__ and __User__.
 ### Users can:
-
   - View their checkup records.
   - View their account details.
   - Change their password. (WIP)<br>
-  
 ### Admins can:
-
   - Add new user accounts.
   - Edit user profiles. (WIP)
-  - Edit user checkup records. (WIP)
-  
+  - Edit user checkup records. (WIP) 
   ## How to Use the Website
   The website was developed using phpMyAdmin and XAMPP client for running the Apache and MySQL modules. Instructions will be based on using the XAMPP client.<br>
   Here are the steps on how to setup the website on your device:
@@ -31,5 +26,11 @@ There are 2 access levels on the website depending on account type: __Admin__ an
   3. Inside the control panel, start up the Apache and MySQL modules.
   4. Place the "Patient-Monitoring-Website-master" folder inside xampp/htdocs.
   5. Open your trusty internet browser.
-  6. In the address bar, type in "localhost/Patient-Monitoring-Website-master".
-  7. DONE.
+  6. In the address bar, type in 'localhost/phpmyadmin'.
+  7. Create a new database called "patient_monitoring".
+  8. Drag and drop or import the db tables from 'tools/patient_monitoring.sql'.
+  9. If you have set another password or username in phpMyAdmin, add it inside 'includes/dbconnect.inc.php'. 
+  10. DONE.
+## Work in Progress:
+- Implement checkup records and client profile editing for Admins.
+- Improve security by adding client-side form validation.
