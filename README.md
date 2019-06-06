@@ -35,5 +35,6 @@ There are 2 access levels on the website depending on account type: __Admin__ an
   9. If you have set another password or username in phpMyAdmin, add it inside _'includes/dbconnect.inc.php'_. 
   10. __DONE.__
 ## Upcoming Improvements
+- Rewrite codebase based on principles in OOP.
 - Implement checkup records and client profile editing for Admins.
 - Improve security by adding client-side form validation.
